@@ -8,7 +8,7 @@ numMap = {
 def changeBase(input, inBase, outBase):
     decRep = convertToDec(input, inBase)
     if outBase == 10:
-        return decRep
+        return str(decRep)
     return convertToBase(decRep, outBase)
 
 
@@ -17,12 +17,12 @@ def convertToDec(input, inBase):
         return int(input)
     res = 0
     power = 0
-    for i in range(len(input)):
-        index = -1 * i
-        digit = input[index]
-        longForm = numMap[digit]
+    for i in range(-1, -1 * len(input) - 1, -1):
+        digit = input[i]
+        longForm = numMap[digit.lower()]
 
         place = (inBase ** power) * longForm
+        power += 1
         res += place
 
     return res
