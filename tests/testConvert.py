@@ -6,7 +6,47 @@ from convert import *
 
 def main():
     testToDec()
+    testToBase()
     print("All tests pass.")
+
+
+def testToBase():
+    assert convertToBase(10, 2) == "1010"
+    assert convertToBase(73971310, 3) == "12011012010120011"
+    assert convertToBase(761273918309180, 4) == "2231011333211132210030330"
+    assert convertToBase(36821238, 5) == "33411234423"
+    assert convertToBase(123981301301, 6) == "132542313322005"
+    assert convertToBase(30180191, 7) == "514345616"
+    assert convertToBase(8373917, 8) == "37743235"
+    assert convertToBase(823727881295, 9) == "2822160288888"
+    assert convertToBase(7327928190, 10) == "7327928190"
+    assert convertToBase(76912237912, 11) == "2A688A53794"
+    assert convertToBase(89323983291, 12) == "1538A507B63"
+    assert convertToBase(3797937201, 13) == "486AC4526"
+    assert convertToBase(37269320320918, 14) == "92BBB7D11810"
+    assert convertToBase(73981310, 15) == "67655C5"
+    assert convertToBase(8373981010, 16) == "1F320CF52"
+    assert convertToBase(23897401801, 17) == "3740E7GAC"
+    assert convertToBase(8931013387128, 18) == "2907G848520"
+    assert convertToBase(389871030, 19) == "858BF2H"
+    assert convertToBase(9371937131, 20) == "768EC2GB"
+    assert convertToBase(381731293791, 21) == "A1JHDAAGF"
+    assert convertToBase(381731293791, 22) == "6L0I7C851"
+    assert convertToBase(3218763128, 23) == "LH22E8M"
+    assert convertToBase(2131231439999, 24) == "J8G69KN7N"
+    assert convertToBase(8279733980, 25) == "18ML2O95"
+    assert convertToBase(2982179301, 26) == "9GPN9LN"
+    assert convertToBase(298217930122, 27) == "11DK8HDC1"
+    assert convertToBase(23342538, 28) == "19R9I2"
+    assert convertToBase(19823120101, 29) == "149D6AQG"
+    assert convertToBase(12093011019, 30) == "GHJJ8R9"
+    assert convertToBase(191290291218, 31) == "6TGKFGND"
+    assert convertToBase(213425499, 32) == "6BH7AR"
+    assert convertToBase(4235424578679, 33) == "30CHU6C9U"
+    assert convertToBase(4242579000, 34) == "2PCQN1A"
+    assert convertToBase(230483304892, 35) == "3KDBIVMM"
+    assert convertToBase(5253599098, 36) == "2EVUV0A"
+    print("convertToBase test passes.")
 
 
 def testToDec():
