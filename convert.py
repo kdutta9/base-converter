@@ -13,6 +13,8 @@ alphaCodes = {
             }
 
 
+# input is string, inBase and outBase are int types.
+# outputs a string
 def changeBase(input, inBase, outBase):
     decRep = convertToDec(input, inBase)
     if outBase == 10:
@@ -20,6 +22,7 @@ def changeBase(input, inBase, outBase):
     return convertToBase(decRep, outBase)
 
 
+# takes input string and int inBase, outputs int type of base-10
 def convertToDec(input, inBase):
     if inBase == 10:
         return int(input)
@@ -36,6 +39,7 @@ def convertToDec(input, inBase):
     return res
 
 
+# takes int types decRep and outBase, outputs string with base-outBase
 def convertToBase(decRep, outBase):
     res = ''
     while decRep > 0:
