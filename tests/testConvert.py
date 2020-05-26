@@ -7,8 +7,20 @@ from convert import *
 def main():
     testToDec()
     testToBase()
+    testEndToEnd()
     print("All tests pass.")
 
+
+def testEndToEnd():
+    assert changeBase("10", 2, 3) == "2"
+    assert changeBase("732191301", 15, 29) == "121NKRPQ"
+    assert changeBase("131231132", 4, 33) == "3CON"
+    assert changeBase("01981389agdga8", 31, 6) == "114344044332401221033454"
+    assert changeBase("01981389agdga8", 31, 26) == "AII56J22D8N62"
+    assert changeBase("01981389agdga8", 31, 36) == "7RS4RKO8D3MY"
+    assert changeBase("42", 10, 10) == "42"
+    assert changeBase("6299aebslausgbyzksquwb", 36, 36) == "6299AEBSLAUSGBYZKSQUWB"
+    print("End to end test passes.")
 
 def testToBase():
     assert convertToBase(10, 2) == "1010"
