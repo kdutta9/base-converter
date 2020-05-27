@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Base Converter</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}?v=2">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}?v=4">
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </head>
   <body>
     <header>
@@ -15,10 +15,17 @@
     <main>
       <div id="input-box">
         <a>Enter number:</a>
-        <form>
-          <input id="num" type="text" name="num" value="">
-        </form>
-        <button id="calc-button" type="button" name="calc">Calculate</button>
+        <p> <input id="num" type="text" name="num" value=""> </p>
+		
+		<a>From base:</a>
+        <p> <input id="from" type="text" name="from" value=""> </p>
+		
+		<a>To base:</a>
+        <p> <input id="to" type="text" name="to" value=""> </p>
+		  
+		  <form action="/convert" method="post">
+	        <p> <button id="calc-button" type="button" name="calc">Calculate</button> </p>
+		  </form>
       </div>
     </main>
   </body>
