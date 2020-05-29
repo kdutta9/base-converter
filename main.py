@@ -13,7 +13,7 @@ def home():
 @app.route("/", methods=['GET', 'POST'])
 def convert():
     if request.method == "POST":
-        num = request.form["num"]
+        num = request.form["num"].lower()
         fromBase = request.form["from"]
         toBase = request.form["to"]
         if checkInput(num, fromBase, toBase) != 1:
@@ -21,7 +21,7 @@ def convert():
         res = changeBase(num, int(fromBase), int(toBase))
         # Print to console.
         # print("Result = " + res)
-        return render_template("index.html", num=num, fromBase=fromBase, toBase=toBase, res=res)
+        return render_template("index.html", num=num.upper(), fromBase=fromBase, toBase=toBase, res=res)
     else:
         return render_template("index.html", num="", fromBase="", toBase="", res="")
 
