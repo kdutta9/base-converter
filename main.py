@@ -19,7 +19,8 @@ def convert():
         if checkInput(num, fromBase, toBase) != 1:
             return render_template("index.html", error="Invalid input.")
         res = changeBase(num, int(fromBase), int(toBase))
-        print("Result = " + res)
+        # Print to console.
+        # print("Result = " + res)
         return render_template("index.html", num=num, fromBase=fromBase, toBase=toBase, res=res)
     else:
         return render_template("index.html", num="", fromBase="", toBase="", res="")
