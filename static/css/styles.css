@@ -2,4 +2,20 @@ body {
   background-color: white;
   text-align: center;
   color: black;
+  height: 100%;
+}
+
+div.tab {
+  background-color: black;
+}
+
+.button {
+  border: none;
+  color: #428df5;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif !important;
 }
