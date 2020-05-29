@@ -16,14 +16,21 @@
       <div id="input-box">
         <form action="{{ url_for('convert') }}" method="post">
 		  <label for="num">Enter Number:</label><br>
-		  <input type="text" id="num" name="num" value=""><br>
+		  <input type="text" id="num" name="num" value="{{ num }}"><br>
 		  <label for="from">From Base:</label><br>
-		  <input type="text" id="from" name="from" value=""><br>
+		  <input type="text" id="from" name="from" value="{{ fromBase }}"><br>
 		  <label for="to">To Base:</label><br>
-		  <input type="text" id="to" name="to" value=""><br><br>
+		  <input type="text" id="to" name="to" value="{{ toBase }}"><br><br>
 		  <input type="submit" value="Calculate">
 		</form> 
       </div>
+	  
+	  <div id="result">
+	    <form>
+		  <label for="num">Result:</label><br>
+		  <input type="text" id="num" name="num" value="{{ res }}"><br>
+		</form> 
+	  </div>
     </main>
   </body>
 </html>
