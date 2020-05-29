@@ -14,18 +14,15 @@
     </header>
     <main>
       <div id="input-box">
-        <a>Enter number:</a>
-        <p> <input id="num" type="text" name="num" value=""> </p>
-		
-		<a>From base:</a>
-        <p> <input id="from" type="text" name="from" value=""> </p>
-		
-		<a>To base:</a>
-        <p> <input id="to" type="text" name="to" value=""> </p>
-		  
-		  <form action="/convert" method="post">
-	        <p> <button id="calc-button" type="button" name="calc">Calculate</button> </p>
-		  </form>
+        <form action="{{ url_for('convert') }}" method="post">
+		  <label for="num">Enter Number:</label><br>
+		  <input type="text" id="num" name="num" value=""><br>
+		  <label for="from">From Base:</label><br>
+		  <input type="text" id="from" name="from" value=""><br>
+		  <label for="to">To Base:</label><br>
+		  <input type="text" id="to" name="to" value=""><br><br>
+		  <input type="submit" value="Calculate">
+		</form> 
       </div>
     </main>
   </body>
