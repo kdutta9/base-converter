@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Base Converter</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}?v=4">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}?v=6">
 	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </head>
   <body>
@@ -27,6 +27,7 @@
 	  
 	  <div id="result">
 	    <form>
+		  <br>
 		  <label for="num">Result:</label><br>
 		  <input type="text" id="num" name="num" value="{{ res }}"><br>
 		</form> 
