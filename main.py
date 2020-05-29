@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from src.convert import changeBase
+from src.validate import checkInput
 
 app = Flask(__name__)
 
@@ -13,9 +14,11 @@ def home():
 def convert():
     if request.method == "POST":
         num = request.form["num"]
-        fromBase = int(request.form["from"])
-        toBase = int(request.form["to"])
-        res = changeBase(num, fromBase, toBase)
+        fromBase = request.form["from"]
+        toBase = request.form["to"]
+        if checkInput(num, fromBase, toBase) != 1:
+            return render_template("index.html", error="Invalid input.")
+        res = changeBase(num, int(fromBase), int(toBase))
         print("Result = " + res)
         return render_template("index.html", num=num, fromBase=fromBase, toBase=toBase, res=res)
     else:
