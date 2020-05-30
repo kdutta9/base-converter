@@ -21,8 +21,7 @@ I built this application to help students check their work in base conversion, i
 ## Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-### Installing
-## Setup
+### Setup
 1. Install `python3`.
     * **macOS:** `brew install python3`
     * **Linux:** `sudo apt-get install python3`
@@ -38,7 +37,7 @@ These instructions will get you a copy of the project up and running on your loc
 6. To run a local version of your website, type `python main.py` (or `python3 main.py`) on the command line.
 7. Visit the local URL in your browser as indicated on the command line (usually `http://127.0.0.1:5000/`).
 
-## Testing <a name = "tests"></a>
+### Testing <a name = "tests"></a>
 In the main directory, run `python src/testConvert` to test the correctness of the program.
 
 The tests contain subtests for each method and an end-to-end test.
