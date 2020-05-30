@@ -38,7 +38,7 @@ These instructions will get you a copy of the project up and running on your loc
 6. To run a local version of your website, type `python main.py` (or `python3 main.py`) on the command line.
 7. Visit the local URL in your browser as indicated on the command line (usually `http://127.0.0.1:5000/`).
 
-## Running the tests <a name = "tests"></a>
+## Testing <a name = "tests"></a>
 In the main directory, run `python src/testConvert` to test the correctness of the program.
 
 The tests contain subtests for each method and an end-to-end test.
